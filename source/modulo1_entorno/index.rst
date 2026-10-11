@@ -1,8 +1,8 @@
 ===============================================================
-Modulo I: Entorno de Desarrollo y Fundamentos de Programacion
+Modulo I: Entorno de desarrollo y fundamentos de programación
 ===============================================================
 
-Este modulo sienta las bases tecnicas indispensables para abordar la ciencia de datos espaciales sin frustraciones de dependencias. Se introduce el editor Visual Studio Code, la gestion de paquetes con Conda-Forge y los fundamentos de Python, NumPy, Pandas y Matplotlib orientados a la oceanografia.
+Este módulo sienta las bases técnicas indispensables para abordar la ciencia de datos espaciales sin frustraciones de dependencias. Se introduce el editor Visual Studio Code, la gestión de paquetes con Conda-Forge y los fundamentos de Python, NumPy, Pandas y Matplotlib orientados a la oceanografía.
 
 .. toctree::
    :maxdepth: 1

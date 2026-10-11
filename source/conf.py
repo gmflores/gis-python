@@ -1,9 +1,9 @@
 import os
 import sys
 
-project = 'Cartografia y Analisis Espacial con Python para Ciencias Marinas'
-copyright = '2026, Maestria en Ciencias Marinas'
-author = 'Programa de Posgrado en Ciencias Marinas'
+project = 'GIS con Python'
+copyright = '2026, GISLAB | CICIMAR-IPN'
+author = 'Programas de Posgrado'
 release = '1.0.0'
 
 extensions = [

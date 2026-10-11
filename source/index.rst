@@ -11,19 +11,19 @@ Estructura de Contenidos
 
 .. toctree::
    :maxdepth: 2
-   :caption: Modulo I: Fundamentos y Entorno
+   :caption: Modulo I: Fundamentos y entorno
 
    modulo1_entorno/index
 
 .. toctree::
    :maxdepth: 2
-   :caption: Modulo II: Datos Vectoriales
+   :caption: Modulo II: Datos vectoriales
 
    modulo2_vectorial/index
 
 .. toctree::
    :maxdepth: 2
-   :caption: Modulo III: Datos Raster y NetCDF
+   :caption: Modulo III: Datos raster y NetCDF
 
    modulo3_raster/index
 
