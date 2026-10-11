@@ -8,5 +8,6 @@ Este modulo sienta las bases tecnicas indispensables para abordar la ciencia de 
    :maxdepth: 1
 
    sesion01_vscode_ecosistema
+   sesion01_practica
    sesion02_fundamentos_python_marino
    sesion03_numpy_pandas_matplotlib
