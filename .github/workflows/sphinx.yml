@@ -1,0 +1,59 @@
+name: Desplegar Sphinx en GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
+
+# Permisos requeridos para desplegar en GitHub Pages mediante OIDC
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Permite una sola ejecucion concurrente de despliegue
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Compilar Documentacion Sphinx
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clonar repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Miniforge y entorno Conda
+        uses: conda-incubator/setup-miniconda@v3
+        with:
+          miniforge-version: latest
+          environment-file: environment.yml
+          activate-environment: geo-marinas
+          auto-activate-base: false
+
+      - name: Compilar HTML con Sphinx
+        shell: bash -el {0}
+        run: |
+          make html
+          # Crear archivo .nojekyll para evitar que GitHub Pages ignore carpetas con guion bajo (_static, _sources)
+          touch build/html/.nojekyll
+
+      - name: Subir artefacto para GitHub Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: build/html
+
+  deploy:
+    name: Desplegar a GitHub Pages
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Desplegar sitio
+        id: deployment
+        uses: actions/deploy-pages@v4
