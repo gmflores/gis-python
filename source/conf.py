@@ -11,8 +11,14 @@ extensions = [
     'sphinx.ext.mathjax',
     'sphinx.ext.viewcode',
     'sphinx_copybutton',
-    'myst_parser',
+    'myst_nb', # Reemplaza a myst-parser y permite la integración de notebooks en Sphinx
 ]
+
+# Opciones de ejecución de notebooks disponibles: "off", "auto", "force", "cache"
+nb__execution_mode = 'off'
+
+# Formatos reconocidos como fuentes de documentación
+source_suffix = { '.rst': 'restructuredtext', '.ipynb': 'myst-nb', '.myst': 'myst-nb', }
 
 templates_path = ['_templates']
 exclude_patterns = []
