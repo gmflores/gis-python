@@ -9,6 +9,7 @@ dependencies:
   - matplotlib>=3.8
   - scipy
   - geopandas>=1.0
+  - geodatasets
   - shapely>=2.0
   - pyogrio>=0.8
   - mapclassify>=2.6
